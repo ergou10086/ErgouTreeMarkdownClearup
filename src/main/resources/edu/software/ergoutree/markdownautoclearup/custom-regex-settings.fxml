@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.software.ergoutree.markdownautoclearup.CustomRegexSettingsController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="自定义正则表达式规则" style="-fx-font-weight: bold; -fx-font-size: 14;" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="addButton" text="添加规则" onAction="#onAddButtonClick" />
+    </HBox>
+    
+    <Separator />
+    
+    <ListView fx:id="rulesListView" VBox.vgrow="ALWAYS" />
+    
+    <HBox spacing="10">
+        <Label text="规则名称:" />
+        <TextField fx:id="nameTextField" HBox.hgrow="ALWAYS" promptText="输入规则名称" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Label text="匹配模式:" />
+        <TextField fx:id="patternTextField" HBox.hgrow="ALWAYS" promptText="输入正则表达式" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Label text="替换内容:" />
+        <TextField fx:id="replacementTextField" HBox.hgrow="ALWAYS" promptText="输入替换内容" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <CheckBox fx:id="enabledCheckBox" text="启用规则" selected="true" />
+    </HBox>
+    
+    <Separator />
+    
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="editButton" text="修改" onAction="#onEditButtonClick" />
+        <Button fx:id="deleteButton" text="删除" onAction="#onDeleteButtonClick" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="applyButton" text="应用" onAction="#onApplyButtonClick" />
+        <Button fx:id="cancelButton" text="取消" onAction="#onCancelButtonClick" />
+    </HBox>
+</VBox>

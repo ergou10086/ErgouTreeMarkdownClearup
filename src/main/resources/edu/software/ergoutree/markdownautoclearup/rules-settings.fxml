@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="15.0" prefWidth="400.0" prefHeight="300.0"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.software.ergoutree.markdownautoclearup.RulesSettingsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    
+    <Label text="空格规则设置" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <ScrollPane fitToWidth="true" prefHeight="200.0">
+        <VBox spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+
+            <Label text="请选择需要启用的空格规则：" style="-fx-font-weight: bold;"/>
+
+            <CheckBox fx:id="chineseEnglishCheckBox" text="在中文与英文之间添加空格" selected="true"/>
+            <CheckBox fx:id="chineseNumberCheckBox" text="在中文与数字之间添加空格" selected="true"/>
+            <CheckBox fx:id="englishNumberCheckBox" text="在英文与数字之间添加空格"/>
+
+            <Separator/>
+
+            <Label text="特殊元素规则：" style="-fx-font-weight: bold;"/>
+
+            <CheckBox fx:id="preserveSpecialElementsCheckBox" text="保留代码块、公式和超链接内容（不添加空格）"
+                      selected="true"/>
+
+            <Separator/>
+
+            <Label text="标点符号规则：" style="-fx-font-weight: bold;"/>
+
+            <CheckBox fx:id="chinesePunctuationSpaceCheckBox" text="在中文标点（，。！？）前后添加空格"/>
+            <CheckBox fx:id="englishPunctuationSpaceCheckBox" text="在英文标点（,.!?）前后添加空格"/>
+
+            <Separator/>
+
+            <Label text="标点符号转换：" style="-fx-font-weight: bold;"/>
+
+            <fx:define>
+                <ToggleGroup fx:id="punctuationGroup"/>
+            </fx:define>
+            <RadioButton fx:id="noConversionRadio" text="不进行标点转换" selected="true"
+                         toggleGroup="$punctuationGroup"/>
+            <RadioButton fx:id="fullWidthRadio" text="将标点转换为全角（中文标点）" toggleGroup="$punctuationGroup"/>
+            <RadioButton fx:id="halfWidthRadio" text="将标点转换为半角（英文标点）" toggleGroup="$punctuationGroup"/>
+
+            <Separator/>
+
+            <Label text="示例预览：" style="-fx-font-weight: bold;"/>
+            <TextArea fx:id="previewTextArea" editable="false" prefHeight="100.0" wrapText="true"
+                      text="示例文本：我们使用Java8编程language来实现这个功能。这是中文标点，这是英文标点,.!?"/>
+        </VBox>
+    </ScrollPane>
+    
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button fx:id="applyButton" text="应用" defaultButton="true" />
+        <Button fx:id="cancelButton" text="取消" cancelButton="true" />
+        <Button fx:id="resetButton" text="恢复默认" />
+    </HBox>
+</VBox>

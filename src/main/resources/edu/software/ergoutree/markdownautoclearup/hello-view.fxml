@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="edu.software.ergoutree.markdownautoclearup.HelloController" fx:id="mainBorderPane">
+    <top>
+        <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <Label text="Markdown 自动添加空格工具" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label text="自动在中英文之间添加适当的空格，使文档更易读" textAlignment="CENTER" />
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="输入文件：" />
+                <TextField fx:id="inputFileTextField" editable="false" HBox.hgrow="ALWAYS" promptText="请选择Markdown文件" />
+                <Button onAction="#onSelectInputFileClick" text="选择文件" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="输出文件：" />
+                <TextField fx:id="outputFileTextField" editable="false" HBox.hgrow="ALWAYS" promptText="请选择保存位置" />
+                <Button onAction="#onSelectOutputFileClick" text="选择位置" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="编辑模式：" />
+                <ToggleButton fx:id="editToggleButton" text="启用编辑" onAction="#onEditToggleClick" />
+                <Button fx:id="saveEditButton" text="保存编辑" onAction="#onSaveEditClick" disable="true" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="applySpacingButton" text="应用空格规则" onAction="#onApplySpacingClick" />
+                <Button fx:id="diffButton" text="差异报告" onAction="#onDiffButtonClick" />
+            </HBox>
+            <StackPane VBox.vgrow="ALWAYS">
+                <TextArea fx:id="editTextArea" promptText="在此编辑文件内容或拖放文件到此处" wrapText="true" VBox.vgrow="ALWAYS" />
+                <Label fx:id="dropHintLabel" text="拖放文件到此处" style="-fx-background-color: rgba(0,0,0,0.5); -fx-text-fill: white; -fx-padding: 10px;" visible="false" alignment="CENTER" />
+            </StackPane>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <HBox alignment="CENTER" spacing="20.0">
+                <Button fx:id="processButton" onAction="#onProcessButtonClick" text="处理并导出" disable="true" />
+                <Button onAction="#onNewFileClick" text="新建文件" />
+                <Button onAction="#onChangeBackgroundClick" text="更换背景" />
+                <Button onAction="#onRulesSettingsClick" text="空格规则设置" />
+                <Button onAction="#onCustomRegexSettingsClick" text="自定义规则" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0" fx:id="progressBarContainer" visible="false">
+                <Label text="处理进度：" />
+                <ProgressBar fx:id="progressBar" progress="0.0" prefWidth="300.0" />
+                <Label fx:id="progressLabel" text="0%" />
+            </HBox>
+            <Label fx:id="statusLabel" text="提示：您可以选择文件处理，或点击新建文件直接编辑" />
+        </VBox>
+    </bottom>
+</BorderPane>

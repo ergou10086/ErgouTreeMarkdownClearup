@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15.0" prefWidth="400.0" prefHeight="300.0" 
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.software.ergoutree.markdownautoclearup.BackgroundSettingsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    
+    <Label text="背景设置" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    
+    <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="图片背景">
+                <content>
+                    <VBox spacing="10.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <Label text="选择背景图片：" />
+                            <TextField fx:id="backgroundImagePathField" editable="false" HBox.hgrow="ALWAYS" promptText="请选择图片文件" />
+                            <Button fx:id="selectImageButton" text="浏览..." />
+                        </HBox>
+                        <CheckBox fx:id="tileBackgroundCheckBox" text="平铺背景（不缩放）" selected="true" />
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="颜色背景">
+                <content>
+                    <VBox spacing="10.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                        <Label text="选择背景颜色：" />
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <ColorPicker fx:id="backgroundColorPicker" />
+                            <Label text="当前颜色：" />
+                            <Rectangle fx:id="colorPreviewRect" width="30" height="30" />
+                        </HBox>
+                        <CheckBox fx:id="useColorBackgroundCheckBox" text="使用颜色作为背景" />
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+    
+    <VBox spacing="5.0">
+        <Label text="背景透明度：" />
+        <HBox alignment="CENTER" spacing="10.0">
+            <Label text="不透明" />
+            <Slider fx:id="opacitySlider" min="0.1" max="1.0" value="0.3" blockIncrement="0.05" HBox.hgrow="ALWAYS" />
+            <Label text="透明" />
+        </HBox>
+        <Label fx:id="opacityValueLabel" text="当前透明度: 30%" alignment="CENTER" />
+    </VBox>
+    
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button fx:id="applyButton" text="应用" defaultButton="true" />
+        <Button fx:id="cancelButton" text="取消" cancelButton="true" />
+        <Button fx:id="removeBackgroundButton" text="移除背景" />
+    </HBox>
+</VBox>

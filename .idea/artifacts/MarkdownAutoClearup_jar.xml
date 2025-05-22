@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MarkdownAutoClearup:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MarkdownAutoClearup_jar</output-path>
+    <root id="archive" name="MarkdownAutoClearup.jar">
+      <element id="module-output" name="MarkdownAutoClearup" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-media/17.0.6/javafx-media-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-swing/17.0.6/javafx-swing-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-media/17.0.6/javafx-media-17.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-swing/17.0.6/javafx-swing-17.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-web/17.0.6/javafx-web-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/commonmark/commonmark/0.21.0/commonmark-0.21.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../OtherLanguageSetting/Maven/mvn-repository/org/openjfx/javafx-web/17.0.6/javafx-web-17.0.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
